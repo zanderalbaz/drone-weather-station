@@ -1,0 +1,25 @@
+{
+  "version": {
+    "major": 1,
+    "minor": 0
+  },
+  "main_interface": {
+    "floating_window": {
+      "is_enable": true,
+      }
+    },
+    "widget_list": [
+      {
+        "widget_index": 1,
+        "widget_type": "switch",
+        "widget_name": "Logging Toggle"
+      }
+    ]
+  },
+  "config_interface": {
+    "text_input_box": {
+      "is_enable": true
+    },
+    "widget_list": []
+  }
+}

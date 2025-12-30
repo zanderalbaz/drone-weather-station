@@ -1,0 +1,1077 @@
+[32m[0.016][core]-[Info]-[DjiCore_Init:107) Payload SDK Version : V3.11.0-beta.0-build.2206 Mar 12 2025 12:41:40 [0m
+[37m[0.017][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[0.018][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[0.018][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	0       	0        [0m
+[37m[0.018][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	0       	0        [0m
+[37m[0.024][adapter]-[Debug]-[DjiAccessAdapter_CheckUserUartBaudRateAndAircraftSeries:1546) Try (p, s, r, c) = (2, 0x0a06, 0x0300, 0x03fd) [0m
+[37m[0.034][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.035][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.035][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.041][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.055][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.076][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.081][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.096][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.106][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.107][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.113][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.116][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.138][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.138][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:713) Try (p, s, r, c) = (2, 0x0507, 0x0503, 0x03fd) [0m
+[37m[0.145][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.145][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.165][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.185][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.206][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.226][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.246][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.254][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.254][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.274][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.294][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.314][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.334][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.355][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.362][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.362][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.382][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.389][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.402][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.407][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.417][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.422][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.425][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.443][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.453][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.456][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.463][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.471][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.471][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.491][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.511][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.531][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.551][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.572][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.579][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.579][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.599][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.619][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.639][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.659][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[0.680][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.680][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:776) Try (p, s, r, c) = (2, 0x0a06, 0x0300, 0x03fd) [0m
+[37m[0.687][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.687][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.707][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.727][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.747][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.768][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.788][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.795][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.795][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.815][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.835][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.856][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.876][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.896][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[0.905][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.905][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[0.905][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.915][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.925][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.937][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[0.945][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.965][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[0.985][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.006][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.013][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.013][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.033][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.053][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.073][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.093][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.103][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[1.103][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[1.103][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	1       	1        [0m
+[37m[1.103][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	0       	0        [0m
+[37m[1.114][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.121][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.121][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.141][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.162][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.182][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.202][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[1.222][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.223][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:840) Try (p, s, r, c) = (2, 0x0503, 0x0801, 0x0001) [0m
+[37m[1.229][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.229][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.250][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.270][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.290][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.310][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.331][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.338][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.338][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.358][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.378][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.398][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.419][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.439][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.446][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.446][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.447][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[1.465][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[1.466][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.487][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.488][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[1.500][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[1.501][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[1.507][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[33m[1.513][linker]-[Warn]-[DjiProtocol_v1Unpack:178) protocol frame crc8 error [0m
+[37m[1.524][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[1.527][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.534][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[1.548][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.576][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.576][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.597][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.617][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.637][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.657][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.678][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.685][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.685][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.705][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.725][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.745][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.765][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[1.786][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.786][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:907) Try (p, s, r, c) = (2, 0x0503, 0x0701, 0x0001) [0m
+[37m[1.793][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.793][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.813][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.833][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.854][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.874][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.894][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[1.904][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[1.904][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.924][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.944][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.964][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[1.984][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.005][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.014][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.014][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.034][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.036][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.048][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.054][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.074][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.074][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.074][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.075][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.076][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.095][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.100][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.115][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.124][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.124][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.144][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.164][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.185][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.196][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[2.196][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[2.196][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	0       	1        [0m
+[37m[2.196][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	0       	0        [0m
+[37m[2.205][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.226][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.235][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.235][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.255][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.275][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.295][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.316][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[2.336][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.336][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:974) Try (p, s, r, c) = (2, 0x0a07, 0x0300, 0x03fd) [0m
+[37m[2.345][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.345][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.365][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.385][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.406][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.426][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.447][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.457][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.457][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.478][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.498][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.518][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.538][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.559][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.568][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.568][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.568][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.570][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.574][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.588][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.591][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.609][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.629][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.633][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.637][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.641][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.646][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.647][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.649][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.664][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[2.670][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.679][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.679][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.699][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.719][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.739][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.759][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.780][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.789][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[2.789][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.809][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.830][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.850][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.870][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[2.891][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[2.891][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:1046) Try (p, s, r, c) = (1, 0x0a00, 0x0300, 0x0000) [0m
+[37m[2.899][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[2.900][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[2.920][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[2.940][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[2.960][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[2.980][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.001][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[3.010][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[3.010][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[31m[3.011][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0xA48E 0x8189 [0m
+[37m[3.013][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.021][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.030][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.033][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.051][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.071][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.079][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.079][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.081][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.086][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.092][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.104][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.105][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.107][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.113][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[3.121][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.121][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.122][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[3.122][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.123][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.125][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.126][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.127][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.130][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.132][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.133][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.134][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.136][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.137][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.140][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.140][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.142][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[31m[3.143][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x70BC 0xB867 [0m
+[37m[3.145][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.146][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.146][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.147][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.151][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.152][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.152][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.154][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.156][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.158][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.160][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.162][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.162][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.163][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[3.166][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[3.167][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.171][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.174][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.175][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[3.178][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[3.180][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[3.182][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x4049 0x88ED [0m
+[37m[3.182][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[31m[3.184][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[3.185][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[3.187][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[3.187][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x70BB 0x666F [0m
+[31m[3.191][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[3.193][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[3.198][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[3.201][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[3.203][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x4898 0x461A [0m
+[37m[3.206][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[31m[3.207][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[3.208][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[3.209][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x05B4 0x7BB4 [0m
+[31m[3.212][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[3.217][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[3.218][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0407 [0m
+[37m[3.218][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.220][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.221][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[3.225][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[3.226][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[3.227][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[3.238][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[3.238][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.258][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.279][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.299][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.306][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[3.306][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[3.306][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	0       	1        [0m
+[37m[3.306][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	1       	1        [0m
+[37m[3.319][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.340][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[3.347][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[3.347][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.367][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.387][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.407][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.427][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[3.448][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[32m[3.448][adapter]-[Info]-[DjiAccessAdapter_Init:279) Try identify UART0 connection failed. Probably because SDK adapter or aircraft not finish init or UART connect error. [0m
+[37m[3.498][adapter]-[Debug]-[DjiAccessAdapter_CheckUserUartBaudRateAndAircraftSeries:1546) Try (p, s, r, c) = (2, 0x0a06, 0x0300, 0x03fd) [0m
+[37m[3.514][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[3.514][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[3.535][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[3.537][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.553][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.555][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[3.560][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.575][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[3.577][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.589][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.595][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[3.615][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.616][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[3.616][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:713) Try (p, s, r, c) = (2, 0x0507, 0x0503, 0x03fd) [0m
+[37m[3.622][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.622][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[3.622][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.643][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.663][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.683][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.703][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.723][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[3.730][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[3.730][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.750][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.770][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.791][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.811][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.831][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[3.838][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[3.838][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.858][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.865][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.878][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.881][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.884][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.898][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.907][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.918][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.921][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.924][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.925][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[3.939][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[3.946][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[3.946][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.966][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[3.986][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.006][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.026][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.047][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.055][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.055][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.075][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.095][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.115][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.135][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[4.156][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.156][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:776) Try (p, s, r, c) = (2, 0x0a06, 0x0300, 0x03fd) [0m
+[37m[4.164][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.164][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.184][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.204][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.225][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.227][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.245][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.265][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.272][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.272][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.293][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.313][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.333][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.353][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.373][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.381][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.381][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.390][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[4.390][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[4.390][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	0       	1        [0m
+[37m[4.390][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	0       	1        [0m
+[37m[4.400][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.401][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.421][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.430][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.441][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.445][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.457][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.461][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.481][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.482][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.489][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.489][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.510][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.530][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.550][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.570][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.590][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.598][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.598][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.618][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.638][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.658][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.678][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[4.699][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.699][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:840) Try (p, s, r, c) = (2, 0x0503, 0x0801, 0x0001) [0m
+[37m[4.706][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.706][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.726][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.746][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.764][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.766][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.786][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.807][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.814][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.814][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.834][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.855][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.875][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.895][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.915][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[4.923][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[4.923][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.943][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.948][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.961][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.963][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[4.964][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.967][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[4.983][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.003][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.024][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.032][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.032][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.052][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.072][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.092][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.112][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.133][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.140][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.140][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.160][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.181][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.201][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.221][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[5.241][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.241][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:907) Try (p, s, r, c) = (2, 0x0503, 0x0701, 0x0001) [0m
+[37m[5.250][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.250][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.270][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.290][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.310][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.330][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.351][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.358][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.358][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.378][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.398][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.406][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.418][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.438][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.459][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.466][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.466][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.466][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.467][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.469][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[5.469][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[5.469][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	0       	1        [0m
+[37m[5.470][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	0       	1        [0m
+[37m[5.470][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.473][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.482][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.486][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.506][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.526][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.527][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.540][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[5.547][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.567][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[33m[5.574][linker]-[Warn]-[DjiProtocol_v1Unpack:178) protocol frame crc8 error [0m
+[37m[5.574][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.574][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.595][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.615][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.636][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.656][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.676][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.685][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.685][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.705][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.725][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.745][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.765][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[5.786][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.786][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:974) Try (p, s, r, c) = (2, 0x0a07, 0x0300, 0x03fd) [0m
+[37m[5.793][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.793][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.813][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.833][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.853][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.874][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.894][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[5.902][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[5.902][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.922][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.942][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.962][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[5.982][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.003][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[6.010][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[6.010][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[6.010][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.020][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[6.030][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.037][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[33m[6.042][linker]-[Warn]-[DjiProtocol_v1Unpack:178) protocol frame crc8 error [0m
+[37m[6.047][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[6.050][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.053][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[6.070][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[33m[6.086][linker]-[Warn]-[DjiProtocol_v1Unpack:178) protocol frame crc8 error [0m
+[33m[6.091][linker]-[Warn]-[DjiProtocol_v1Unpack:178) protocol frame crc8 error [0m
+[37m[6.091][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.112][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[6.122][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[6.123][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.143][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.163][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.184][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.204][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.225][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[6.238][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[6.238][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.258][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.278][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.298][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.319][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[6.339][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[6.339][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:1046) Try (p, s, r, c) = (1, 0x0a00, 0x0300, 0x0000) [0m
+[37m[6.347][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[6.347][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.367][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.387][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.407][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.427][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.448][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[6.455][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[6.455][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.471][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.475][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.481][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.495][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.502][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.506][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.509][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.515][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.529][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.534][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.535][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.556][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[6.563][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.563][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.563][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[6.563][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.563][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.566][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.566][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.567][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.567][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[6.567][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[6.567][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	1       	1        [0m
+[37m[6.567][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	1       	1        [0m
+[37m[6.570][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.572][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.573][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[6.575][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[6.578][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.581][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.581][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.582][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.583][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.585][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.586][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.588][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.590][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.591][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.592][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.595][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.596][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.597][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.601][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.602][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.602][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.603][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.604][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.606][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.608][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.608][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.610][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[6.612][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x3900 0x0BBA [0m
+[31m[6.613][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[6.613][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[6.617][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[6.618][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x7CB4 0x92A8 [0m
+[37m[6.618][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[31m[6.621][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[6.624][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[31m[6.626][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[6.631][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[6.632][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[6.634][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x1E00 0xADE7 [0m
+[31m[6.638][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[6.641][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[6.645][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.647][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.647][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.648][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[6.651][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[6.652][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.655][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.657][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.658][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.660][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.660][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.662][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[6.665][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[31m[6.676][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[6.676][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[6.676][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.696][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.717][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.737][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.757][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.778][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[6.790][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[6.790][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.810][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.830][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.851][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.871][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[6.891][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[32m[6.891][adapter]-[Info]-[DjiAccessAdapter_Init:279) Try identify UART0 connection failed. Probably because SDK adapter or aircraft not finish init or UART connect error. [0m
+[37m[6.942][adapter]-[Debug]-[DjiAccessAdapter_CheckUserUartBaudRateAndAircraftSeries:1546) Try (p, s, r, c) = (2, 0x0a06, 0x0300, 0x03fd) [0m
+[37m[6.960][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[6.960][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[6.975][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[6.981][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[6.987][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[6.987][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.000][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.001][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.017][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.021][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.040][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.041][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.058][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.060][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.062][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.062][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:713) Try (p, s, r, c) = (2, 0x0507, 0x0503, 0x03fd) [0m
+[37m[7.069][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.069][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.089][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.109][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.129][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.149][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.170][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.181][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.181][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.201][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.221][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.242][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.262][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.282][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.289][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.289][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.289][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.305][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.310][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.320][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.325][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.330][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.340][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.350][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.361][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.366][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.370][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.385][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.390][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.398][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.398][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.418][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.438][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.458][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.478][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.499][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.506][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.506][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.526][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.546][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.566][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.586][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[7.607][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.607][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:776) Try (p, s, r, c) = (2, 0x0a06, 0x0300, 0x03fd) [0m
+[37m[7.614][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.614][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.634][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.654][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.668][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[7.668][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[7.668][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	0       	1        [0m
+[37m[7.668][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	1       	1        [0m
+[37m[7.674][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.694][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.715][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.722][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.722][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.742][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.762][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.782][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.802][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.823][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.830][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.830][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.835][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.838][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.840][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.850][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.855][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.857][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.870][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.871][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.877][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.879][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.890][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.898][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.905][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.911][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.927][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[7.931][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[7.938][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[7.938][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.958][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.978][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[7.998][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[8.019][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[8.039][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.046][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.046][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[8.066][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[8.087][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[8.107][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[8.127][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[8.147][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.147][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:840) Try (p, s, r, c) = (2, 0x0503, 0x0801, 0x0001) [0m
+[37m[8.156][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.156][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.176][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.197][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.217][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.237][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.257][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.267][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.267][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.287][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.307][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.327][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.347][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.368][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.378][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.378][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.378][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.378][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.394][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.398][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.401][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.405][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.410][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.415][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.419][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.439][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.459][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.469][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.470][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.479][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.489][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.489][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.509][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.529][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.549][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.569][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.590][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.599][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.599][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.619][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.640][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.660][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.680][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0801 0x0001 [0m
+[37m[8.700][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.700][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:907) Try (p, s, r, c) = (2, 0x0503, 0x0701, 0x0001) [0m
+[37m[8.709][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.709][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.729][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.749][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.751][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[8.751][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[8.751][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	0       	1        [0m
+[37m[8.751][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	1       	1        [0m
+[37m[8.770][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.790][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.811][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.820][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.820][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.841][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.861][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.881][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.901][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.922][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[8.931][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[8.931][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.940][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.951][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.953][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.968][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.971][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.980][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.985][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[8.991][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[8.993][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.000][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.004][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.004][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.010][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.012][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.032][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.041][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[9.041][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.062][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.082][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.102][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.123][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.143][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.153][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[9.154][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.174][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.194][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.214][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.235][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0503->0x0701 0x0001 [0m
+[37m[9.255][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.255][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:974) Try (p, s, r, c) = (2, 0x0a07, 0x0300, 0x03fd) [0m
+[37m[9.265][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[9.265][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.285][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.306][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.326][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.346][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.367][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.377][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[9.377][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.397][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.417][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.437][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.457][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.478][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.489][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.489][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[9.489][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.499][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.506][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.509][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.530][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.541][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.542][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.550][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.564][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.564][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.570][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.577][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.580][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[9.590][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.601][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[9.601][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.621][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.641][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.661][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.681][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.702][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.712][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[9.712][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.732][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.752][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.772][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.792][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A07->0x0300 0x03FD [0m
+[37m[9.813][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[9.813][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:1046) Try (p, s, r, c) = (1, 0x0a00, 0x0300, 0x0000) [0m
+[37m[9.822][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[9.822][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.842][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.849][utils]-[Debug]-[DjiCore_RootTask:131) work execution time: [0m
+[37m[9.849][utils]-[Debug]-[DjiCore_RootTask:132) name	                execution time (ms)	  max execution time (ms) [0m
+[37m[9.849][utils]-[Debug]-[DjiCore_RootTask:134) recorderWork                    	1       	1        [0m
+[37m[9.849][utils]-[Debug]-[DjiCore_RootTask:134) flowControllerTask              	0       	1        [0m
+[37m[9.863][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.883][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.903][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.924][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[31m[9.933][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x7C78 0x7C75 [0m
+[37m[9.933][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[9.933][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.942][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[9.943][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[9.953][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.970][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[9.973][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[9.974][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[9.975][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[31m[9.990][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0xB4E9 0xC637 [0m
+[37m[9.994][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.014][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[10.014][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[10.015][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.020][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[10.021][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[37m[10.036][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[10.050][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.050][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[10.050][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.050][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[10.050][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[10.050][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x12DD 0xEB44 [0m
+[31m[10.052][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x054A 0xEA4A [0m
+[37m[10.053][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[10.055][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[10.057][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.060][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.063][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.063][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.065][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.067][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.068][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.071][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.071][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.071][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.072][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.075][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.076][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.077][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.078][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.080][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.081][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.083][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.086][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.086][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.088][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.090][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.091][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.091][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.093][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.096][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[10.098][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[10.102][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[10.103][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[31m[10.106][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[10.106][linker]-[Debug]-[DjiProtocol_sdkUnpack:219) protocol frame length error [0m
+[31m[10.109][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[10.111][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0x3800 0x7A27 [0m
+[37m[10.111][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[31m[10.113][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[10.117][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[31m[10.121][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[31m[10.123][linker]-[Error]-[DjiProtocol_sdkUnpack:228) protocol frame crc16 error:0xF049 0x2A8D [0m
+[31m[10.126][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[10.130][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.131][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.132][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.132][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.135][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.137][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.137][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.138][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.141][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.142][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.143][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.145][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.147][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.148][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.150][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.151][linker]-[Debug]-[DjiProtocol_sdkUnpack:276) SDK-Recv: 0x03->0x0A 0x0205 [0m
+[37m[10.153][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[31m[10.162][linker]-[Error]-[DjiProtocol_sdkUnpack:237) protocol frame crc32 error [0m
+[37m[10.162][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[10.162][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.182][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.203][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.224][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.244][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.265][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[37m[10.276][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:1, channelId:0 [0m
+[37m[10.276][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.296][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.316][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.337][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.357][linker]-[Debug]-[DjiProtocol_sdkPack:183) SDK-Send: 0x0A->0x03 0x0000 [0m
+[37m[10.377][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:1, channelId:0 [0m
+[32m[10.377][adapter]-[Info]-[DjiAccessAdapter_Init:279) Try identify UART0 connection failed. Probably because SDK adapter or aircraft not finish init or UART connect error. [0m
+[37m[10.428][adapter]-[Debug]-[DjiAccessAdapter_CheckUserUartBaudRateAndAircraftSeries:1546) Try (p, s, r, c) = (2, 0x0a06, 0x0300, 0x03fd) [0m
+[37m[10.444][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.444][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[10.444][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[10.450][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.464][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[10.485][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[10.494][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.505][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[10.512][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.525][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.525][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x04>V1-Send: 0x0A06->0x0300 0x03FD [0m
+[37m[10.528][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.531][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.536][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.540][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.544][linker]-[Debug]-[DjiProtocol_v1Unpack:170) protocol frame length error [0m
+[37m[10.545][linker]-[Debug]-[DjiLinker_DeInit:171) deinit linker success, protocol:2, channelId:0 [0m
+[37m[10.545][adapter]-[Debug]-[DjiAccessAdapter_IdentifyUart0InfoAndAircraftSeries:713) Try (p, s, r, c) = (2, 0x0507, 0x0503, 0x03fd) [0m
+[37m[10.553][linker]-[Debug]-[DjiLinker_Init:129) init linker success, protocol:2, channelId:0 [0m
+[37m[10.553][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0000>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[10.573][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x01>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[10.593][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x02>V1-Send: 0x0507->0x0503 0x03FD [0m
+[37m[10.613][linker]-[Debug]-[DjiProtocol_v1Pack:123) <0x03>V1-Send: 0x0507->0x0503 0x03FD [0m

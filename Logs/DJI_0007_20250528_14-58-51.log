@@ -1,0 +1,633 @@
+[32m[0.027][user]-[Info]-[main:193) ** SIMULATION ** - DJI core initialisation skipped [0m
+[32m[0.027][user]-[Info]-[DjiTest_FcSubscriptionRunSample:320) Fc subscription sample start [0m
+[32m[0.027][user]-[Info]-[DjiTest_FcSubscriptionRunSample:323) --> Step 1: Init fc subscription module [0m
+[31m[0.120][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[0.120][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[0.120][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[0.120][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[0.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[0.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[0.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[0.319][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[37m[0.499][user]-[Debug]-[DjiUser_MonitorTask:588) thread pcpu: [0m
+[37m[0.499][user]-[Debug]-[DjiUser_MonitorTask:589) tid	name	pcpu [0m
+[31m[0.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[0.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[0.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[0.519][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[37m[0.570][user]-[Debug]-[DjiUser_MonitorTask:593) 3190	dji_sdk_demo_li	105.000000 %. [0m
+[37m[0.638][user]-[Debug]-[DjiUser_MonitorTask:593) 3193	    logger_task	0.000000 %. [0m
+[37m[0.709][user]-[Debug]-[DjiUser_MonitorTask:593) 3194	   monitor task	0.000000 %. [0m
+[31m[0.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[0.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[0.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[0.719][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[37m[0.790][user]-[Debug]-[DjiUser_MonitorTask:593) 3195	dji_sdk_demo_li	100.000000 %. [0m
+[37m[0.867][user]-[Debug]-[DjiUser_MonitorTask:593) 3197	dji_sdk_demo_li	1.200000 %. [0m
+[31m[0.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[0.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[0.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[0.919][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[37m[0.938][user]-[Debug]-[DjiUser_MonitorTask:593) 3198	dji_sdk_demo_li	4.700000 %. [0m
+[37m[0.965][user]-[Debug]-[DjiUser_MonitorTask:597) heap used: 12288 B. [0m
+[37m[0.974][user]-[Debug]-[DjiUser_MonitorTask:598) stack used: 12288 B. [0m
+[31m[1.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[1.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[1.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[1.119][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[1.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[1.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[1.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[1.319][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[1.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[1.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[1.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[1.519][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[1.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[1.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[1.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[1.719][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[1.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[1.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[1.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[1.919][user]-[Error]-[tri_task:135) TriSonica T=25.6 °C [0m
+[31m[2.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[2.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[2.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[2.119][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[2.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[2.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[2.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[2.319][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[2.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[2.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[2.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[2.519][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[2.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[2.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[2.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[2.719][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[2.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[2.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[2.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[2.919][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[3.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[3.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[3.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[3.119][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[3.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[3.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[3.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[3.319][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[3.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[3.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[3.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[3.519][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[3.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[3.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[3.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[3.719][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[3.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[3.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[3.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[3.919][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[4.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[4.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[4.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[4.119][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[4.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[4.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[4.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[4.319][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[4.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[4.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[4.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[4.519][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[4.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[4.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[4.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[4.719][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[4.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[4.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[4.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[4.919][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[5.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[5.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[5.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[5.119][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[5.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[5.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[5.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[5.319][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[5.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[5.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[5.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[5.519][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[5.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[5.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[5.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[5.719][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[5.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[5.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[5.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[5.919][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[6.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[6.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[6.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[6.119][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[6.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[6.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[6.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[6.319][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[6.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[6.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[6.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[6.519][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[6.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[6.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[6.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[6.719][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[6.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[6.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[6.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[6.919][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[7.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[7.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[7.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[7.119][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[7.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[7.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[7.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[7.319][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[7.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[7.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[7.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[7.519][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[7.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[7.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[7.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[7.719][user]-[Error]-[tri_task:135) TriSonica T=25.6 °C [0m
+[31m[7.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[7.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[7.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[7.919][user]-[Error]-[tri_task:135) TriSonica T=25.6 °C [0m
+[31m[8.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[8.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[8.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[8.119][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[8.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[8.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[8.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[8.319][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[8.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[8.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[8.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[8.519][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[8.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[8.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[8.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[8.719][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[8.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[8.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[8.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[8.919][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[9.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[9.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[9.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[9.119][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[9.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[9.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[9.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[9.319][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[9.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[9.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[9.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[9.519][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[9.720][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[9.720][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[9.720][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[9.720][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[9.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[9.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[9.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[9.919][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[10.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[10.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[10.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[10.119][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[10.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[10.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[10.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[10.319][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[10.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[10.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[10.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[10.519][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[10.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[10.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[10.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[10.719][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[10.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[10.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[10.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[10.919][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[11.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[11.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[11.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[11.119][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[37m[11.257][user]-[Debug]-[DjiUser_MonitorTask:588) thread pcpu: [0m
+[37m[11.257][user]-[Debug]-[DjiUser_MonitorTask:589) tid	name	pcpu [0m
+[31m[11.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[11.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[11.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[11.319][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[37m[11.327][user]-[Debug]-[DjiUser_MonitorTask:593) 3190	dji_sdk_demo_li	104.000000 %. [0m
+[37m[11.398][user]-[Debug]-[DjiUser_MonitorTask:593) 3193	    logger_task	0.000000 %. [0m
+[37m[11.469][user]-[Debug]-[DjiUser_MonitorTask:593) 3194	   monitor task	0.000000 %. [0m
+[31m[11.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[11.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[11.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[11.519][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[37m[11.538][user]-[Debug]-[DjiUser_MonitorTask:593) 3195	dji_sdk_demo_li	98.199997 %. [0m
+[37m[11.608][user]-[Debug]-[DjiUser_MonitorTask:593) 3197	dji_sdk_demo_li	0.900000 %. [0m
+[37m[11.678][user]-[Debug]-[DjiUser_MonitorTask:593) 3198	dji_sdk_demo_li	4.800000 %. [0m
+[37m[11.687][user]-[Debug]-[DjiUser_MonitorTask:597) heap used: 12288 B. [0m
+[37m[11.696][user]-[Debug]-[DjiUser_MonitorTask:598) stack used: 12288 B. [0m
+[31m[11.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[11.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[11.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[11.719][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[11.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[11.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[11.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[11.919][user]-[Error]-[tri_task:135) TriSonica T=24.9 °C [0m
+[31m[12.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[12.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[12.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[12.119][user]-[Error]-[tri_task:135) TriSonica T=24.8 °C [0m
+[31m[12.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[12.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[12.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[12.319][user]-[Error]-[tri_task:135) TriSonica T=24.8 °C [0m
+[31m[12.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[12.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[12.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[12.519][user]-[Error]-[tri_task:135) TriSonica T=24.9 °C [0m
+[31m[12.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[12.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[12.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[12.719][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[12.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[12.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[12.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[12.919][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[13.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[13.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[13.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[13.119][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[13.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[13.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[13.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[13.319][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[13.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[13.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[13.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[13.519][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[13.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[13.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[13.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[13.719][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[13.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[13.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[13.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[13.919][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[14.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[14.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[14.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[14.119][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[14.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[14.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[14.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[14.319][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[14.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[14.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[14.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[14.519][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[14.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[14.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[14.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[14.719][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[14.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[14.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[14.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[14.919][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[15.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[15.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[15.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[15.119][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[15.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[15.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[15.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[15.319][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[15.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[15.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[15.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[15.519][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[15.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[15.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[15.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[15.719][user]-[Error]-[tri_task:135) TriSonica T=25.6 °C [0m
+[31m[15.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[15.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[15.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[15.919][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[16.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[16.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[16.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[16.119][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[16.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[16.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[16.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[16.319][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[16.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[16.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[16.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[16.519][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[16.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[16.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[16.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[16.719][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[16.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[16.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[16.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[16.919][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[17.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[17.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[17.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[17.119][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[17.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[17.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[17.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[17.319][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[17.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[17.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[17.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[17.519][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[17.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[17.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[17.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[17.719][user]-[Error]-[tri_task:135) TriSonica T=25.6 °C [0m
+[31m[17.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[17.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[17.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[17.919][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[18.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[18.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[18.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[18.119][user]-[Error]-[tri_task:135) TriSonica T=25.6 °C [0m
+[31m[18.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[18.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[18.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[18.319][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[18.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[18.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[18.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[18.519][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[18.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[18.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[18.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[18.719][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[18.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[18.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[18.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[18.919][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[19.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[19.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[19.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[19.119][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[19.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[19.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[19.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[19.319][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[19.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[19.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[19.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[19.519][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[19.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[19.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[19.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[19.719][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[19.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[19.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[19.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[19.919][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[20.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[20.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[20.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[20.119][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[20.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[20.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[20.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[20.319][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[20.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[20.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[20.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[20.519][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[20.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[20.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[20.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[20.719][user]-[Error]-[tri_task:135) TriSonica T=25.6 °C [0m
+[31m[20.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[20.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[20.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[20.919][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[21.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[21.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[21.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[21.119][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[21.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[21.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[21.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[21.319][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[21.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[21.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[21.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[21.519][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[21.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[21.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[21.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[21.719][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[21.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[21.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[21.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[21.919][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[37m[21.960][user]-[Debug]-[DjiUser_MonitorTask:588) thread pcpu: [0m
+[37m[21.960][user]-[Debug]-[DjiUser_MonitorTask:589) tid	name	pcpu [0m
+[37m[22.028][user]-[Debug]-[DjiUser_MonitorTask:593) 3190	dji_sdk_demo_li	103.000000 %. [0m
+[31m[22.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[22.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[22.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[22.119][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[37m[22.119][user]-[Debug]-[DjiUser_MonitorTask:593) 3193	    logger_task	0.000000 %. [0m
+[37m[22.187][user]-[Debug]-[DjiUser_MonitorTask:593) 3194	   monitor task	0.000000 %. [0m
+[37m[22.255][user]-[Debug]-[DjiUser_MonitorTask:593) 3195	dji_sdk_demo_li	98.099998 %. [0m
+[31m[22.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[22.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[22.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[22.319][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[37m[22.325][user]-[Debug]-[DjiUser_MonitorTask:593) 3197	dji_sdk_demo_li	0.800000 %. [0m
+[37m[22.393][user]-[Debug]-[DjiUser_MonitorTask:593) 3198	dji_sdk_demo_li	4.700000 %. [0m
+[37m[22.402][user]-[Debug]-[DjiUser_MonitorTask:597) heap used: 12288 B. [0m
+[37m[22.411][user]-[Debug]-[DjiUser_MonitorTask:598) stack used: 12288 B. [0m
+[31m[22.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[22.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[22.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[22.519][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[22.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[22.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[22.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[22.719][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[22.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[22.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[22.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[22.919][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[23.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[23.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[23.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[23.119][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[23.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[23.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[23.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[23.319][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[23.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[23.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[23.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[23.519][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[23.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[23.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[23.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[23.719][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[23.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[23.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[23.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[23.919][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[24.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[24.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[24.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[24.119][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[24.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[24.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[24.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[24.319][user]-[Error]-[tri_task:135) TriSonica T=25.0 °C [0m
+[31m[24.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[24.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[24.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[24.519][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[24.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[24.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[24.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[24.719][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[24.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[24.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[24.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[24.919][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[25.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[25.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[25.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[25.119][user]-[Error]-[tri_task:135) TriSonica T=25.1 °C [0m
+[31m[25.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[25.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[25.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[25.319][user]-[Error]-[tri_task:135) TriSonica T=25.2 °C [0m
+[31m[25.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[25.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[25.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[25.519][user]-[Error]-[tri_task:135) TriSonica T=25.3 °C [0m
+[31m[25.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[25.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[25.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[25.719][user]-[Error]-[tri_task:135) TriSonica T=25.4 °C [0m
+[31m[25.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[25.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[25.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[25.919][user]-[Error]-[tri_task:135) TriSonica T=25.5 °C [0m
+[31m[26.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[26.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[26.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[26.119][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[26.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[26.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[26.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[26.319][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[26.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[26.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[26.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[26.519][user]-[Error]-[tri_task:135) TriSonica T=26.0 °C [0m
+[31m[26.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[26.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[26.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[26.719][user]-[Error]-[tri_task:135) TriSonica T=26.1 °C [0m
+[31m[26.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[26.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[26.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[26.919][user]-[Error]-[tri_task:135) TriSonica T=26.1 °C [0m
+[31m[27.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[27.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[27.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[27.119][user]-[Error]-[tri_task:135) TriSonica T=26.1 °C [0m
+[31m[27.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[27.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[27.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[27.319][user]-[Error]-[tri_task:135) TriSonica T=26.0 °C [0m
+[31m[27.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[27.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[27.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[27.519][user]-[Error]-[tri_task:135) TriSonica T=26.0 °C [0m
+[31m[27.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[27.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[27.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[27.719][user]-[Error]-[tri_task:135) TriSonica T=26.0 °C [0m
+[31m[27.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[27.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[27.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[27.919][user]-[Error]-[tri_task:135) TriSonica T=26.0 °C [0m
+[31m[28.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[28.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[28.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[28.119][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[28.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[28.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[28.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[28.319][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[28.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[28.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[28.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[28.519][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[28.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[28.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[28.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[28.719][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[28.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[28.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[28.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[28.919][user]-[Error]-[tri_task:135) TriSonica T=25.9 °C [0m
+[31m[29.119][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[29.119][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[29.119][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[29.119][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[29.319][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[29.319][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[29.319][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[29.319][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[29.519][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[29.519][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[29.519][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[29.519][user]-[Error]-[tri_task:135) TriSonica T=25.8 °C [0m
+[31m[29.719][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[29.719][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[29.719][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[29.719][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m
+[31m[29.919][utils]-[Error]-[DjiFlowController_SendData:330) mutex lock error [0m
+[31m[29.919][widget]-[Error]-[DjiWidgetFloatingWindow_ShowMessage:604) send data to float window with flow control error: 0x000000E3. [0m
+[31m[29.919][user]-[Error]-[DjiTest_WidgetLogAppend:673) Floating window show message error, stat = 0x000000E3 [0m
+[31m[29.919][user]-[Error]-[tri_task:135) TriSonica T=25.7 °C [0m

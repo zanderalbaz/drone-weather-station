@@ -1,0 +1,346 @@
+#include <pthread.h>
+#include <string.h>          /* memcpy(), memset() */
+#include <stdatomic.h>       /* C11 atomics */
+#include <math.h>            /* NAN, cosf(), sinf() */
+#include <dji_fc_subscription.h>
+#include <dji_platform.h>
+#include "logger.h"          /* brings in LogRow, row_set_nan(), logger_queue_push(), TriData, etc. */
+
+/* ─── Externals from tri_reader.c / test_fc_subscription.c ───────────────── */
+extern _Atomic(TriData)  g_tri;
+extern _Atomic bool      exit_script_and_shutdown;
+extern bool             simulate_fc;
+
+/* ─── “Scratch” buffers for every FC topic you subscribed to ─────────────────── */
+/* (Their types must match exactly what your dji_fc_subscription.h provides.) */
+static T_DjiFcSubscriptionQuaternion         _quatBuf = {0};
+static T_DjiFcSubscriptionAccelerationRaw    _accRawBuf = {0};
+static T_DjiFcSubscriptionAccelerationRaw    _accBodyBuf = {0};
+static T_DjiFcSubscriptionAccelerationRaw    _accGroundBuf = {0};
+static T_DjiFcSubscriptionVelocity           _velBuf = {0};
+static T_DjiFcSubscriptionAngularRateRaw     _angRawBuf = {0};
+static T_DjiFcSubscriptionAngularRateFusioned _angFusionBuf = {0};
+static T_DjiFcSubscriptionAltitudeFused      _altFusedBuf = 0.0f;
+static T_DjiFcSubscriptionAltitudeBarometer  _altBaroBuf = 0.0f;
+static T_DjiFcSubscriptionHeightFusion       _heightFusionBuf = 0.0f;
+static T_DjiFcSubscriptionHeightRelative     _heightRelativeBuf = 0.0f;
+static T_DjiFcSubscriptionPositionFused      _posFusedBuf = {0};
+static T_DjiFcSubscriptionPositionVO         _posVoBuf = {0};
+/* Compass (Magnetometer) */
+static T_DjiFcSubscriptionCompass            _compassBuf = {0};
+/* Avoidance (RelativePosition) */
+static T_DjiFcSubscriptionAvoidData          _avoidBuf = {0};
+/* RTK connect status */
+static T_DjiFcSubscriptionRTKConnectStatus   _rtkConnectBuf = {0};
+/* Flight anomaly */
+static T_DjiFcSubscriptionFlightAnomaly      _flightAnomalyBuf = {0};
+/* GPS position & velocity */
+static T_DjiFcSubscriptionGpsVelocity        _gpsVelBuf = {0};
+/* GPS time (uint32 seconds from FC) */
+static T_DjiFcSubscriptionGpsTime            _gpsTimeBuf = 0;
+/* RTK position & velocity & yaw */
+static T_DjiFcSubscriptionRtkPosition        _rtkPosBuf = {0};
+static T_DjiFcSubscriptionRtkVelocity        _rtkVelBuf = {0};
+static T_DjiFcSubscriptionRtkYaw             _rtkYawBuf = 0.0f;
+
+/* ─── fusion thread itself ────────────────────────────────────────────────────── */
+static void *fusion_task(void *arg)
+{
+    (void)arg;
+    T_DjiOsalHandler *os = DjiPlatform_GetOsalHandler();
+    const uint64_t period_us = 2500ULL;  /* 400 Hz → 2.5 ms per tick */
+    uint32_t ms;
+    os->GetTimeMs(&ms);
+    uint64_t t0 = (uint64_t)ms * 1000ULL;
+
+    float fake_yaw = 0.0f;
+    uint64_t last_tri_tick = 0;
+
+    T_DjiFcSubscriptionGpsPosition        _gpsPosBuf = {0};
+    T_DjiDataTimestamp                   _gpsPosTs = {0};
+    uint32_t prevGpsPosTs      = 0;
+
+    while (!atomic_load_explicit(&exit_script_and_shutdown, memory_order_relaxed))
+    {
+        /* ─── 1) Pull *every* subscribed topic (non‐blocking) ───────────────── */
+        if (!simulate_fc)
+        {
+            /* Quaternion (400 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_QUATERNION,
+                (uint8_t *)&_quatBuf, sizeof(_quatBuf), NULL);
+
+            /* ACCELERATION_RAW (400 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_ACCELERATION_RAW,
+                (uint8_t *)&_accRawBuf, sizeof(_accRawBuf), NULL);
+
+            /* ACCELERATION_BODY (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_ACCELERATION_BODY,
+                (uint8_t *)&_accBodyBuf, sizeof(_accBodyBuf), NULL);
+
+            /* ACCELERATION_GROUND (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_ACCELERATION_GROUND,
+                (uint8_t *)&_accGroundBuf, sizeof(_accGroundBuf), NULL);
+
+            /* VELOCITY (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_VELOCITY,
+                (uint8_t *)&_velBuf, sizeof(_velBuf), NULL);
+
+            /* ANGULAR_RATE_RAW (400 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_ANGULAR_RATE_RAW,
+                (uint8_t *)&_angRawBuf, sizeof(_angRawBuf), NULL);
+
+            /* ANGULAR_RATE_FUSIONED (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_ANGULAR_RATE_FUSIONED,
+                (uint8_t *)&_angFusionBuf, sizeof(_angFusionBuf), NULL);
+
+            /* ALTITUDE_FUSED (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_ALTITUDE_FUSED,
+                (uint8_t *)&_altFusedBuf, sizeof(_altFusedBuf), NULL);
+
+            /* ALTITUDE_BAROMETER (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_ALTITUDE_BAROMETER,
+                (uint8_t *)&_altBaroBuf, sizeof(_altBaroBuf), NULL);
+
+            /* HEIGHT_FUSION (100 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_HEIGHT_FUSION,
+                (uint8_t *)&_heightFusionBuf, sizeof(_heightFusionBuf), NULL);
+
+            /* HEIGHT_RELATIVE (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_HEIGHT_RELATIVE,
+                (uint8_t *)&_heightRelativeBuf, sizeof(_heightRelativeBuf), NULL);
+
+            /* POSITION_FUSED (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_POSITION_FUSED,
+                (uint8_t *)&_posFusedBuf, sizeof(_posFusedBuf), NULL);
+
+            /* POSITION_VO (200 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_POSITION_VO,
+                (uint8_t *)&_posVoBuf, sizeof(_posVoBuf), NULL);
+
+            /* COMPASS (100 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_COMPASS,
+                (uint8_t *)&_compassBuf, sizeof(_compassBuf), NULL);
+
+            /* AVOID_DATA (100 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_AVOID_DATA,
+                (uint8_t *)&_avoidBuf, sizeof(_avoidBuf), NULL);
+
+            /* RTK_CONNECT_STATUS (50 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_RTK_CONNECT_STATUS,
+                (uint8_t *)&_rtkConnectBuf, sizeof(_rtkConnectBuf), NULL);
+
+            /* FLIGHT_ANOMALY (50 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_FLIGHT_ANOMALY,
+                (uint8_t *)&_flightAnomalyBuf, sizeof(_flightAnomalyBuf), NULL);
+
+            /* GPS_POSITION (5 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_GPS_POSITION,
+                (uint8_t *)&_gpsPosBuf, sizeof(_gpsPosBuf), NULL);
+
+            /* GPS_VELOCITY (5 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_GPS_VELOCITY,
+                (uint8_t *)&_gpsVelBuf, sizeof(_gpsVelBuf), NULL);
+
+            /* GPS_TIME (5 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_GPS_TIME,
+                (uint8_t *)&_gpsTimeBuf, sizeof(_gpsTimeBuf), NULL);
+
+            /* RTK_POSITION (5 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_RTK_POSITION,
+                (uint8_t *)&_rtkPosBuf, sizeof(_rtkPosBuf), NULL);
+
+            /* RTK_VELOCITY (5 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_RTK_VELOCITY,
+                (uint8_t *)&_rtkVelBuf, sizeof(_rtkVelBuf), NULL);
+
+            /* RTK_YAW (5 Hz) */
+            (void)DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_RTK_YAW,
+                (uint8_t *)&_rtkYawBuf, sizeof(_rtkYawBuf), NULL);
+        }
+        else
+        {
+            /* ─── simulate “quaternion yaw” at 400 Hz ────────────────── */
+            fake_yaw += 0.005f;
+            if (fake_yaw > 6.283185f) fake_yaw -= 6.283185f;
+            _quatBuf.q0 =  cosf(fake_yaw * 0.5f);
+            _quatBuf.q3 =  sinf(fake_yaw * 0.5f);
+            _quatBuf.q1 = _quatBuf.q2 = 0.0f;
+        }
+
+        /* ─── 2) Build one LogRow and fill in everything  ─────────────────── */
+        os->GetTimeMs(&ms);
+        LogRow row;
+        memset(&row, 0, sizeof(row));
+        row.mono_us = (uint64_t)ms * 1000ULL;  /* 64-bit µs monotonic clock */
+
+        /* Set all floats (and doubles) to NaN by default */
+        row_set_nan(&row);
+
+        /* ─── overwrite exactly those fields that just updated ────────────── */
+
+        /* 1) QUATERNION */
+        row.q[0] = _quatBuf.q0;
+        row.q[1] = _quatBuf.q1;
+        row.q[2] = _quatBuf.q2;
+        row.q[3] = _quatBuf.q3;
+
+        /* 2) ACCELERATION_RAW */
+        row.accel_raw[0] = _accRawBuf.x;
+        row.accel_raw[1] = _accRawBuf.y;
+        row.accel_raw[2] = _accRawBuf.z;
+
+        /* 3) ACCELERATION_BODY */
+        row.accel_body[0] = _accBodyBuf.x;
+        row.accel_body[1] = _accBodyBuf.y;
+        row.accel_body[2] = _accBodyBuf.z;
+
+        /* 4) ACCELERATION_GROUND */
+        row.accel_ground[0] = _accGroundBuf.x;
+        row.accel_ground[1] = _accGroundBuf.y;
+        row.accel_ground[2] = _accGroundBuf.z;
+
+        /* 5) VELOCITY */
+        row.vel[0] = _velBuf.data.x;
+        row.vel[1] = _velBuf.data.y;
+        row.vel[2] = _velBuf.data.z;
+
+        /* 6) ANGULAR_RATE_RAW */
+        row.ang_raw[0] = _angRawBuf.x;
+        row.ang_raw[1] = _angRawBuf.y;
+        row.ang_raw[2] = _angRawBuf.z;
+
+        /* 7) (If you want ANGULAR_RATE_FUSIONED, add another row field) */
+
+        /* 8) ALTITUDE_FUSED */
+        row.alt_fused = _altFusedBuf;
+
+        /* 9) ALTITUDE_BAROMETER */
+        row.alt_baro = _altBaroBuf;
+
+        /* 10) HEIGHT_FUSION */
+        row.height_fus = _heightFusionBuf;
+
+        /* 11) HEIGHT_RELATIVE */
+        row.height_rel = _heightRelativeBuf;
+
+        /* 12) POSITION_FUSED (struct PositionData has latitude, longitude, altitude) */
+        row.pos_vo[0] = (float)_posFusedBuf.latitude;
+        row.pos_vo[1] = (float)_posFusedBuf.longitude;
+        row.pos_vo[2] = (float)_posFusedBuf.altitude;
+
+        /* 13) POSITION_VO – if you want a separate field, you’d need to add it to LogRow.
+           For now, we just overwrite pos_vo or skip it. (Here we skip rewriting pos_vo.) */
+
+        /* 14) COMPASS (Mag struct has .x, .y, .z) */
+        row.compass[0] = _compassBuf.x;
+        row.compass[1] = _compassBuf.y;
+        row.compass[2] = _compassBuf.z;
+
+        /* 15) AVOID_DATA */
+        row.avoid[0] = _avoidBuf.front;
+        row.avoid[1] = _avoidBuf.up;
+        row.avoid[2] = _avoidBuf.back;
+        row.avoid[3] = _avoidBuf.down;
+        row.avoid[4] = _avoidBuf.left;
+        row.avoid[5] = _avoidBuf.right;
+
+        /* 16) RTK_CONNECT_STATUS : typically has a single boolean “is_connected” field */
+        row.rtk_connect = _rtkConnectBuf.rtkConnected;
+
+        /* 17) FLIGHT_ANOMALY : if the struct has “has_anomaly” */
+        row.flight_anomaly = _flightAnomalyBuf.gpsYawError;
+
+        /* 18) GPS_POSITION (Vector3d has .latitude, .longitude, .altitude) */
+        if (_gpsPosTs != prevGpsPosTs) {
+            row.gps_pos[0] = _gpsPosBuf.x;
+            row.gps_pos[1] = _gpsPosBuf.y;
+            row.gps_pos[2] = _gpsPosBuf.z;
+            prevGpsPosTs = 
+        } else {
+            for (int i = 0; i < 3 ; i++) row.gps_pos[i] = NAN;
+        }
+
+        /* 19) GPS_VELOCITY */
+        row.gps_vel[0] = _gpsVelBuf.x;
+        row.gps_vel[1] = _gpsVelBuf.y;
+        row.gps_vel[2] = _gpsVelBuf.z;
+
+        /* 20) GPS_TIME */
+        row.gps_s = (uint32_t)_gpsTimeBuf;
+
+        /* 21) RTK_POSITION (PositionData) */
+        row.rtk_pos[0] = _rtkPosBuf.latitude;
+        row.rtk_pos[1] = _rtkPosBuf.longitude;
+        /* For altitude, some DJI SDK versions name it “altitude”; others “height”. */
+        row.rtk_pos[2] = _rtkPosBuf.hfsl;
+
+        /* 22) RTK_VELOCITY */
+        row.rtk_vel[0] = _rtkVelBuf.x;
+        row.rtk_vel[1] = _rtkVelBuf.y;
+        row.rtk_vel[2] = _rtkVelBuf.z;
+
+        /* 23) RTK_YAW */
+        row.rtk_yaw = _rtkYawBuf;
+
+        /* ─── 3) TriSonica (unchanged) ────────────────────────────────────────── */
+        TriData tri = atomic_load_explicit(&g_tri, memory_order_relaxed);
+        if (tri.tick_us == last_tri_tick)
+        {
+            /* no new Tri line → put NaNs */
+            memset(&tri, 0, sizeof(tri));
+            for (size_t i = 0; i < (sizeof(tri) / sizeof(float)) - 1; ++i)
+            {
+                ((float *)&tri)[i] = NAN;
+            }
+        }
+        else
+        {
+            last_tri_tick = tri.tick_us;
+        }
+        row.tri = tri;
+
+        /* ─── 4) Hand off to CSV writer ───────────────────────────────────────── */
+        logger_queue_push(&row);
+
+        /* ─── 5) “sleep” until the next 2.5 ms slot ───────────────────────────── */
+        t0 += period_us;
+        os->GetTimeMs(&ms);
+        int64_t diff = (int64_t)(t0 - (uint64_t)ms * 1000ULL);
+        if (diff > 0)
+        {
+            os->TaskSleepMs((uint32_t)(diff / 1000ULL));
+        }
+        /* If we’re late, we drop straight into the next iteration. */
+    }
+
+    return NULL;  /* never actually reached */
+}
+
+/* ─── bootstrap function ───────────────────────────────────────────────────── */
+void fusion_start(pthread_t *th)
+{
+    pthread_create(th, NULL, fusion_task, NULL);
+}

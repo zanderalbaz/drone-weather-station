@@ -1,0 +1,353 @@
+/**
+ ********************************************************************
+ * @file    test_fc_subscription.c
+ * @brief
+ *
+ * @copyright (c) 2021 DJI. All rights reserved.
+ *
+ * All information contained herein is, and remains, the property of DJI.
+ * The intellectual and technical concepts contained herein are proprietary
+ * to DJI and may be covered bDjiLowSpeedDataChannel_RegRecvDataCallback(DJI_CHANNEL_ADDRESS_MASTER_RC_APP,
+    (DjiLowSpeedDataChannelRecvDataCallback)OnTextInputReceived);
+y U.S. and foreign patents, patents in process,
+ * and protected by trade secret or copyright law.  Dissemination of this
+ * information, including but not limited to data and other proprietary
+ * material(s) incorporated within the information, in any form, is strictly
+ * prohibited without the express written consent of DJI.
+ *
+ * If you receive this source code without DJI’s authorization, you may not
+ * further disseminate the information, and you must immediately remove the
+ * source code and notify DJI of its removal. DJI reserves the right to pursue
+ * legal actions against you for any loss(es) or damage(s) caused by your
+ * failure to do so.
+ *
+ *********************************************************************
+ */
+
+/* Includes ------------------------------------------------------------------*/
+#include <utils/util_misc.h>
+#include <math.h>
+#include "test_fc_subscription.h"
+#include "dji_logger.h"
+#include "dji_platform.h"
+#include "widget_interaction_test/test_widget_interaction.h"
+#include "widget/test_widget.h"
+#include "dji_widget.h"
+#include <stdarg.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdint.h>
+#include <errno.h>
+#include <stdio.h>
+#include "dji_low_speed_data_channel.h"
+#include <sys/stat.h>
+#include <time.h>
+
+/* Private constants ---------------------------------------------------------*/
+#define FC_SUBSCRIPTION_TASK_FREQ         (1)
+#define FC_SUBSCRIPTION_TASK_STACK_SIZE   (1024)
+
+#define DJI_LOW_SPEED_DATA_CHANNEL_TEXT 1
+
+/* Private types -------------------------------------------------------------*/
+
+/* Private functions declaration ---------------------------------------------*/
+static void *UserFcSubscription_Task(void *arg);
+static T_DjiReturnCode DjiTest_FcSubscriptionReceiveQuaternionCallback(const uint8_t *data, uint16_t dataSize,
+                                                                       const T_DjiDataTimestamp *timestamp);
+
+/* Private variables ---------------------------------------------------------*/
+static T_DjiTaskHandle s_userFcSubscriptionThread;
+static bool s_userFcSubscriptionDataShow = false;
+static uint8_t s_totalSatelliteNumberUsed = 0;
+static uint32_t s_userFcSubscriptionDataCnt = 0;
+static bool logging_active = false; // already declared in your sample
+static int32_t s_logging_widget_state = 0; // to hold the widget's state
+static bool save_csv = false;
+static bool waiting_for_csv_name = true;
+static FILE *g_csvFile = NULL;
+char fileName[256] = {0};
+static bool exit_script_and_shutdown = false;
+
+void startLogging(void)
+{
+    logging_active = true;
+    USER_LOG_INFO("Logging started.");
+}
+
+void stopLogging(void)
+{
+    logging_active = false;
+    USER_LOG_INFO("Logging stopped.");
+}
+
+void exitScriptSaveCsv(void)
+{
+    save_csv = true;
+    USER_LOG_INFO("Saving Script, exiting script.");
+}
+
+// New callback function to process text input (assumes UTF-8 encoded null-terminated string)
+#include <errno.h>
+#include <string.h>
+#include <stdlib.h>
+#include <stdint.h>
+
+// Callback for text input; must return uint32_t
+
+uint32_t OnTextInputReceived(const uint8_t *data, uint16_t dataSize)
+{
+
+    // Copy user input into fileName buffer.
+    size_t copySize = (dataSize < sizeof(fileName) - 1) ? dataSize : sizeof(fileName) - 1;
+    memcpy(fileName, data, copySize);
+    fileName[copySize] = '\0';
+
+    // Append ".csv" if not already present.
+    if (strstr(fileName, ".csv") == NULL) {
+        strncat(fileName, ".csv", sizeof(fileName) - strlen(fileName) - 1);
+    }
+
+    USER_LOG_INFO("Received CSV file name: %s", fileName);
+    DjiTest_WidgetLogAppend("Received CSV file name: %s", fileName);
+
+    // Indicate that we are no longer waiting for a filename.
+    waiting_for_csv_name = false;
+
+    // Close the CSV file if it is open.
+    if (g_csvFile) {
+        fclose(g_csvFile);
+        g_csvFile = NULL;
+    }
+
+    // Construct the absolute destination path.
+
+    // Get current UTC time.
+    time_t now = time(NULL);
+    struct tm utc_tm;
+    gmtime_r(&now, &utc_tm);
+    char utcTimeStr[32];
+    strftime(utcTimeStr, sizeof(utcTimeStr), "_%Y_%m_%d_%H_%M_%S", &utc_tm);
+
+    char newFilePath[256];
+    snprintf(newFilePath, sizeof(newFilePath), "/home/rmbl/%s%s", utcTimeStr, fileName);
+
+    // Check if the file already exists.
+    struct stat st;
+    int counter = 1;
+    char candidate[256];
+    // Start candidate with the initial newFilePath.
+    strncpy(candidate, newFilePath, sizeof(candidate));
+    candidate[sizeof(candidate)-1] = '\0';
+
+    // If the candidate exists, modify the basename by appending a number.
+    while (stat(candidate, &st) == 0) {
+        // Parse fileName into basename and extension.
+        char basename[256] = {0};
+        char extension[32] = {0};
+        char *dot = strrchr(fileName, '.');
+        if (dot) {
+            size_t baseLen = dot - fileName;
+            if (baseLen > sizeof(basename) - 1) {
+                baseLen = sizeof(basename) - 1;
+            }
+            strncpy(basename, fileName, baseLen);
+            basename[baseLen] = '\0';
+            strncpy(extension, dot, sizeof(extension));
+            extension[sizeof(extension)-1] = '\0';
+        } else {
+            strncpy(basename, fileName, sizeof(basename)-1);
+            basename[sizeof(basename)-1] = '\0';
+            extension[0] = '\0';
+        }
+        // Create a new candidate with an appended number.
+        snprintf(candidate, sizeof(candidate), "/home/rmbl/%s%d%s", basename, counter, extension);
+        counter++;
+    }
+
+    // Attempt to rename the temporary CSV file to the candidate name.
+    int ret = rename("/home/rmbl/psdk_log.csv", candidate);
+    if (ret == 0) {
+        USER_LOG_INFO("CSV file renamed to %s", candidate);
+        DjiTest_WidgetLogAppend("CSV file renamed to %s", candidate);
+    } else {
+        USER_LOG_ERROR("Failed to rename CSV file: %s", strerror(errno));
+        DjiTest_WidgetLogAppend("Failed to rename CSV file: %s", strerror(errno));
+    }
+
+    // Optionally, you could reopen a new CSV file for further logging:
+    g_csvFile = fopen("/home/rmbl/psdk_log.csv", "w");
+    if (g_csvFile == NULL) {
+        USER_LOG_ERROR("Failed to open CSV log file.");
+    }
+
+    return 0;
+}
+
+T_DjiReturnCode OnWidgetSetValue(E_DjiWidgetType type, uint32_t index, int32_t value, void *userData)
+{
+    switch (index) {
+        case 1:  // Button 1: Start logging
+            if (value == 1) {
+                waiting_for_csv_name = true;
+                startLogging();
+                DjiTest_WidgetLogAppend("Logging Data");
+            }
+            break;
+        case 2:  // Button 2: Stop logging
+            if (value == 1) {
+                logging_active = false;
+                DjiTest_WidgetLogAppend("Logging Stopped, to save CSV enter file name and hit send in settings");
+            }
+            break;
+        case 3:  // Button 3: Shutdown and exit
+            if (value == 1) {
+                if (logging_active) {
+                    DjiTest_WidgetLogAppend("Cannot Shutdown and Exit while Data is logging");
+                } else if (waiting_for_csv_name == true) {
+                    DjiTest_WidgetLogAppend("Any unsaved data will be lost! Press again to shutdown");
+                    waiting_for_csv_name = false;
+                } else {
+                    exit_script_and_shutdown = true;
+                    DjiTest_WidgetLogAppend("Shutting Down!");
+                }
+            }
+            break;
+        default:
+            USER_LOG_INFO("Unknown widget index.");
+            break;
+    }
+    return DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS;
+}
+
+T_DjiReturnCode OnWidgetGetValue(E_DjiWidgetType type, uint32_t index, int32_t *value, void *userData)
+{
+    *value = 0;
+    return DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS;
+}
+
+
+/* Exported functions definition ---------------------------------------------*/
+
+
+
+T_DjiReturnCode DjiTest_FcSubscriptionDataShowTrigger(void)
+{
+    s_userFcSubscriptionDataShow = !s_userFcSubscriptionDataShow;
+
+    return DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS;
+}
+
+T_DjiReturnCode DjiTest_FcSubscriptionGetTotalSatelliteNumber(uint8_t *number)
+{
+    *number = s_totalSatelliteNumberUsed;
+
+    return DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS;
+}
+
+
+/* Private functions definition-----------------------------------------------*/
+#ifndef __CC_ARM
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wmissing-noreturn"
+#pragma GCC diagnostic ignored "-Wreturn-type"
+#endif
+
+static void *UserFcSubscription_Task(void *arg)
+{
+    T_DjiReturnCode djiStat;
+    T_DjiFcSubscriptionVelocity velocity = {0};
+    T_DjiDataTimestamp timestamp = {0};
+    T_DjiFcSubscriptionGpsPosition gpsPosition = {0};
+    T_DjiFcSubscriptionGpsDetails gpsDetails = {0};
+    T_DjiOsalHandler *osalHandler = NULL;
+
+    USER_UTIL_UNUSED(arg);
+    osalHandler = DjiPlatform_GetOsalHandler();
+
+    while (1) {
+        osalHandler->TaskSleepMs(1000 / FC_SUBSCRIPTION_TASK_FREQ);
+
+        djiStat = DjiFcSubscription_GetLatestValueOfTopic(DJI_FC_SUBSCRIPTION_TOPIC_VELOCITY,
+                                                          (uint8_t *) &velocity,
+                                                          sizeof(T_DjiFcSubscriptionVelocity),
+                                                          &timestamp);
+        if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+            USER_LOG_ERROR("get value of topic velocity error.");
+        }
+
+        if (s_userFcSubscriptionDataShow == true) {
+            USER_LOG_INFO("velocity: x %f y %f z %f, healthFlag %d.", velocity.data.x, velocity.data.y,
+                          velocity.data.z, velocity.health);
+        }
+
+        djiStat = DjiFcSubscription_GetLatestValueOfTopic(DJI_FC_SUBSCRIPTION_TOPIC_GPS_POSITION,
+                                                          (uint8_t *) &gpsPosition,
+                                                          sizeof(T_DjiFcSubscriptionGpsPosition),
+                                                          &timestamp);
+        if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+            USER_LOG_ERROR("get value of topic gps position error.");
+        }
+
+        if (s_userFcSubscriptionDataShow == true) {
+            USER_LOG_INFO("gps position: x %d y %d z %d.", gpsPosition.x, gpsPosition.y, gpsPosition.z);
+        }
+
+        djiStat = DjiFcSubscription_GetLatestValueOfTopic(DJI_FC_SUBSCRIPTION_TOPIC_GPS_DETAILS,
+                                                          (uint8_t *) &gpsDetails,
+                                                          sizeof(T_DjiFcSubscriptionGpsDetails),
+                                                          &timestamp);
+        if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+            USER_LOG_ERROR("get value of topic gps details error.");
+        }
+
+        if (s_userFcSubscriptionDataShow == true) {
+            USER_LOG_INFO("gps total satellite number used: %d %d %d.",
+                          gpsDetails.gpsSatelliteNumberUsed,
+                          gpsDetails.glonassSatelliteNumberUsed,
+                          gpsDetails.totalSatelliteNumberUsed);
+            s_totalSatelliteNumberUsed = gpsDetails.totalSatelliteNumberUsed;
+        }
+    }
+}
+
+#ifndef __CC_ARM
+#pragma GCC diagnostic pop
+#endif
+
+
+static T_DjiReturnCode DjiTest_FcSubscriptionReceiveQuaternionCallback(const uint8_t *data, uint16_t dataSize,
+                                                                       const T_DjiDataTimestamp *timestamp)
+{
+    T_DjiFcSubscriptionQuaternion *quaternion = (T_DjiFcSubscriptionQuaternion *) data;
+    dji_f64_t pitch, yaw, roll;
+
+    USER_UTIL_UNUSED(dataSize);
+
+    pitch = (dji_f64_t) asinf(-2 * quaternion->q1 * quaternion->q3 + 2 * quaternion->q0 * quaternion->q2) * 57.3;
+    roll = (dji_f64_t) atan2f(2 * quaternion->q2 * quaternion->q3 + 2 * quaternion->q0 * quaternion->q1,
+                             -2 * quaternion->q1 * quaternion->q1 - 2 * quaternion->q2 * quaternion->q2 + 1) * 57.3;
+    yaw = (dji_f64_t) atan2f(2 * quaternion->q1 * quaternion->q2 + 2 * quaternion->q0 * quaternion->q3,
+                             -2 * quaternion->q2 * quaternion->q2 - 2 * quaternion->q3 * quaternion->q3 + 1) *
+          57.3;
+
+    return DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS;
+}
+
+// Override the weak function so that log messages are sent to the floating window.
+void DjiTest_WidgetLogAppend(const char *fmt, ...)
+{
+    char logBuffer[DJI_WIDGET_FLOATING_WINDOW_MSG_MAX_LEN];
+    va_list args;
+    va_start(args, fmt);
+    vsnprintf(logBuffer, DJI_WIDGET_FLOATING_WINDOW_MSG_MAX_LEN, fmt, args);
+    va_end(args);
+
+    // Display the message in the Smart Controller's floating log window.
+    T_DjiReturnCode djiStat = DjiWidgetFloatingWindow_ShowMessage(logBuffer);
+    if (djiStat != DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+        USER_LOG_ERROR("Floating window show message error, stat = 0x%08llX", djiStat);
+    }
+}
+
+/****************** (C) COPYRIGHT DJI Innovations *****END OF FILE****/
