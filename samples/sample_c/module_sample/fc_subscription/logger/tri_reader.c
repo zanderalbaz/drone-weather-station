@@ -132,15 +132,16 @@ static int read_line(int fd, char *buf, size_t maxlen)
     return (int)n;
 }
 
-/* tokenize "key value key value …" and fill struct (–99.xx → NaN) */
-static void parse_tri(const char *line, TriData *t)
+/* tokenize "key value key value ..." and fill struct (-99.xx -> NaN) */
+static bool parse_tri(const char *line, TriData *t)
 {
-    *t = (TriData){ .S = NAN };     /* default NaNs so missing fields stay NaN */
+    memset(t, 0, sizeof(*t));
+    tri_set_measurements_nan(t);
 
     /* very light sanity: require at least one space and one known tag */
     if (!strpbrk(line, " \t") ||
         !(strstr(line, " T ") || strstr(line, " H ") || strstr(line, " S ") || strstr(line, " P "))) {
-        return;
+        return false;
     }
 
     char copy[256];
@@ -184,6 +185,8 @@ static void parse_tri(const char *line, TriData *t)
         key = strtok(NULL, delim);
         val = strtok(NULL, delim);
     }
+
+    return true;
 }
 
 /* ===================== rate-change API (called from widget) ===================== */
@@ -228,6 +231,7 @@ static void *tri_task(void *arg)
     tri_set_nonblock(s_fd, 1);
 
     char buf[256];
+    uint64_t tri_seq = 0;
 
     while (!atomic_load_explicit(&exit_script_and_shutdown, memory_order_relaxed)) {
 
@@ -256,12 +260,10 @@ static void *tri_task(void *arg)
 
         /* 3) Parse and publish */
         TriData tmp;
-        parse_tri(buf, &tmp);
-
-        /* timestamp the sample */
-        struct timespec ts;
-        clock_gettime(CLOCK_MONOTONIC_RAW, &ts);
-        tmp.tick_us = ts.tv_sec * 1000000ULL + ts.tv_nsec / 1000ULL;
+        if (!parse_tri(buf, &tmp)) {
+            continue;
+        }
+        tmp.seq = ++tri_seq;
 
         atomic_store_explicit(&g_tri, tmp, memory_order_relaxed);
 

@@ -4,6 +4,7 @@
 #define LOGGER_H
 
 #include <stdint.h>
+#include <stddef.h>
 #include <stdatomic.h>
 #include <stdbool.h>
 #include <math.h>
@@ -29,10 +30,12 @@ void tri_request_output_rate(uint8_t);
 typedef struct {            /* TriSonica packet already in SI units */
     float S, S2, D, DV, U, V, W, C, T, H, DP, P, AD;
     float AX, AY, AZ, PI, RO, MX, MY, MZ, MD, TD;
-    uint64_t tick_us;       /* monotonic time when parsed           */
+    uint64_t seq;           /* internal freshness counter, not CSV  */
 } TriData;
 
 typedef struct {            /* one fused row at 400 Hz              */
+    uint32_t schema_version;
+    uint64_t row_index;
     uint64_t mono_us;       /* 0-based monotonic clock (µs)         */
     uint32_t gps_s;         /* UTC seconds from FC (5 Hz)           */
     /* Fast FC topics ------------------------------------------- */
@@ -57,21 +60,42 @@ typedef struct {            /* one fused row at 400 Hz              */
     double rtk_pos[3];
     float  rtk_vel[3];
     uint16_t rtk_yaw;
+    uint8_t tri_valid;
     /* TriSonica snapshot --------------------------------------- */
     TriData tri;
 } LogRow;
 
-/* ------------ small helper to fill every float in a LogRow with NAN -- */
-/*   (integer fields stay at 0)                                             */
-static inline void row_set_nan(LogRow *r)
+static inline void tri_set_measurements_nan(TriData *t)
 {
-    float *fptr = (float *)r;
-    size_t count = sizeof(LogRow) / sizeof(float);
-    for (size_t i = 0; i < count; i++) {
-        fptr[i] = NAN;
-    }
+    t->S = NAN;  t->S2 = NAN; t->D = NAN;  t->DV = NAN;
+    t->U = NAN;  t->V = NAN;  t->W = NAN;  t->C = NAN;
+    t->T = NAN;  t->H = NAN;  t->DP = NAN; t->P = NAN;
+    t->AD = NAN; t->AX = NAN; t->AY = NAN; t->AZ = NAN;
+    t->PI = NAN; t->RO = NAN; t->MX = NAN; t->MY = NAN;
+    t->MZ = NAN; t->MD = NAN; t->TD = NAN;
 }
 
+static inline void row_set_float_fields_nan(LogRow *r)
+{
+    for (size_t i = 0; i < 4; i++) r->q[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->ang_raw[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->accel_raw[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->vel[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->accel_body[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->accel_ground[i] = NAN;
+    r->alt_fused = NAN;
+    r->alt_baro = NAN;
+    r->height_rel = NAN;
+    r->height_fus = NAN;
+    for (size_t i = 0; i < 3; i++) r->pos_vo[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->compass[i] = NAN;
+    for (size_t i = 0; i < 6; i++) r->avoid[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->gps_pos[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->gps_vel[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->rtk_pos[i] = NAN;
+    for (size_t i = 0; i < 3; i++) r->rtk_vel[i] = NAN;
+    tri_set_measurements_nan(&r->tri);
+}
 
 /* ring-buffer helpers implemented in log_writer.c -------------- */
 void logger_queue_push(const LogRow *row);

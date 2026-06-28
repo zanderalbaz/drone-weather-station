@@ -30,7 +30,7 @@ int logger_queue_pop(LogRow *out)
 
 /* ---------------- CSV header (one single line) ------------------------- */
 static const char *CSV_HEADER =
-"# mono_us,gps_s,"
+"# schema_version,row_index,mono_us,gps_s,"
 "q0,q1,q2,q3,"
 "ang_x,ang_y,ang_z,"
 "acc_x,acc_y,acc_z,"
@@ -46,11 +46,11 @@ static const char *CSV_HEADER =
 "gps_vx,gps_vy,gps_vz,"
 "rtk_lat,rtk_lon,rtk_alt,"
 "rtk_vx,rtk_vy,rtk_vz,rtk_yaw,"
+"tri_valid,"
 "tri_S,tri_S2,tri_D,tri_DV,"
 "tri_U,tri_V,tri_W,tri_C,tri_T,tri_H,tri_DP,tri_P,tri_AD,"
 "tri_AX,tri_AY,tri_AZ,tri_PI,tri_RO,"
-"tri_MX,tri_MY,tri_MZ,tri_MD,tri_TD,"
-"tri_tick_us\n";
+"tri_MX,tri_MY,tri_MZ,tri_MD,tri_TD\n";
 
 /* ---------------- CSV writer thread ----------------------------------- */
 static void *writer_task(void *arg)
@@ -78,8 +78,9 @@ static void *writer_task(void *arg)
 
 
                 fprintf(g_csvFile,
-"%" PRIu64 ",%u,"
+"%u,%" PRIu64 ",%" PRIu64 ",%u,"
 "%.7g,%.7g,%.7g,%.7g,"
+"%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,"
@@ -93,13 +94,13 @@ static void *writer_task(void *arg)
 "%.7g,%.7g,%.7g,"
 "%.10f,%.10f,%.2f,"
 "%.7g,%.7g,%.7g,%.2f,"
+"%u,"
 "%.7g,%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,%.7g,%.7g,%.7g,%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,%.7g,%.7g,"
-"%.7g,%.7g,%.7g,%.7g,%.7g,"
-"%" PRIu64 "\n",
+"%.7g,%.7g,%.7g,%.7g,%.7g\n",
 
-row.mono_us, row.gps_s,
+row.schema_version, row.row_index, row.mono_us, row.gps_s,
 row.q[0], row.q[1], row.q[2], row.q[3],
 row.ang_raw[0], row.ang_raw[1], row.ang_raw[2],
 row.accel_raw[0], row.accel_raw[1], row.accel_raw[2],
@@ -115,15 +116,15 @@ row.rtk_connect, row.flight_anomaly,
 row.gps_pos[0], row.gps_pos[1], row.gps_pos[2],
 row.gps_vel[0], row.gps_vel[1], row.gps_vel[2],
 row.rtk_pos[0], row.rtk_pos[1], row.rtk_pos[2],
-row.rtk_vel[0], row.rtk_vel[1], row.rtk_vel[2], row.rtk_yaw,
+row.rtk_vel[0], row.rtk_vel[1], row.rtk_vel[2], (double)row.rtk_yaw,
+row.tri_valid,
 row.tri.S,  row.tri.S2, row.tri.D,  row.tri.DV,
 row.tri.U,  row.tri.V,  row.tri.W,  row.tri.C,
 row.tri.T,  row.tri.H,  row.tri.DP, row.tri.P,  row.tri.AD,
 row.tri.AX, row.tri.AY, row.tri.AZ,
 row.tri.PI, row.tri.RO,
 row.tri.MX, row.tri.MY, row.tri.MZ,
-row.tri.MD, row.tri.TD,
-row.tri.tick_us);
+row.tri.MD, row.tri.TD);
             
 			
         }

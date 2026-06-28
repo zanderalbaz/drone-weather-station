@@ -4,7 +4,7 @@
 #include <math.h>            /* NAN, cosf(), sinf() */
 #include <dji_fc_subscription.h>
 #include <dji_platform.h>
-#include "logger.h"          /* brings in LogRow, row_set_nan(), logger_queue_push(), TriData, etc. */
+#include "logger.h"          /* brings in LogRow, logger_queue_push(), TriData, etc. */
 
 /* ─── Externals from tri_reader.c / test_fc_subscription.c ───────────────── */
 extern _Atomic(TriData)  g_tri;
@@ -54,7 +54,8 @@ static void *fusion_task(void *arg)
     uint64_t t0 = (uint64_t)ms * 1000ULL;
 
     float fake_yaw = 0.0f;
-    uint64_t last_tri_tick = 0;
+    uint64_t last_tri_seq = 0;
+    uint64_t row_index = 0;
 
     T_DjiFcSubscriptionGpsPosition        _gpsPosBuf = {0};
     T_DjiDataTimestamp                   _gpsPosTs       = {0};
@@ -194,10 +195,10 @@ static void *fusion_task(void *arg)
         os->GetTimeMs(&ms);
         LogRow row;
         memset(&row, 0, sizeof(row));
+        row_set_float_fields_nan(&row);
+        row.schema_version = 2;
+        row.row_index = row_index++;
         row.mono_us = (uint64_t)ms * 1000ULL;  /* 64-bit µs monotonic clock */
-
-        /* Set all floats (and doubles) to NaN by default */
-        row_set_nan(&row);
 
         /* ─── overwrite exactly those fields that just updated ────────────── */
 
@@ -302,20 +303,16 @@ static void *fusion_task(void *arg)
 
         /* ─── 3) TriSonica (unchanged) ────────────────────────────────────────── */
         TriData tri = atomic_load_explicit(&g_tri, memory_order_relaxed);
-        if (tri.tick_us == last_tri_tick)
+        if (tri.seq != 0 && tri.seq != last_tri_seq)
         {
-            /* no new Tri line → put NaNs */
-            memset(&tri, 0, sizeof(tri));
-            for (size_t i = 0; i < (sizeof(tri) / sizeof(float)) - 1; ++i)
-            {
-                ((float *)&tri)[i] = NAN;
-            }
+            last_tri_seq = tri.seq;
+            row.tri_valid = 1;
+            row.tri = tri;
         }
         else
         {
-            last_tri_tick = tri.tick_us;
+            row.tri_valid = 0;
         }
-        row.tri = tri;
 
         /* ─── 4) Hand off to CSV writer ───────────────────────────────────────── */
         logger_queue_push(&row);
