@@ -132,7 +132,7 @@ void exitScriptSaveCsv(void)
 // Callback for text input; must return uint32_t
 
 /* --------------------------------------------------------------------
- * Callback : rename the ongoing 400 Hz fusion log
+ * Callback : request save of the stopped 400 Hz fusion log
  * ------------------------------------------------------------------*/
 uint32_t OnTextInputReceived(const uint8_t *data, uint16_t dataSize)
 {
@@ -150,13 +150,6 @@ uint32_t OnTextInputReceived(const uint8_t *data, uint16_t dataSize)
     USER_LOG_INFO("Received CSV file name: %s", fileName);
     DjiTest_WidgetLogAppend("Received CSV file name: %s", fileName);
     waiting_for_csv_name = false;
-
-    /* ---------- close & release the live log ---------------------- */
-    if (g_csvFile) {
-        fflush(g_csvFile);
-        fclose(g_csvFile);
-        g_csvFile = NULL;                    /* tells writer to reopen */
-    }
 
     /* ---------- build destination path ---------------------------- */
     char base[256] = {0}, ext[64] = {0};
@@ -188,20 +181,13 @@ uint32_t OnTextInputReceived(const uint8_t *data, uint16_t dataSize)
                  base, utc, ctr++, ext);
     }
 
-    /* ---------- rename the closed temp file ----------------------- */
-    const char *liveLog =
-        "/home/rmbl/Desktop/Collected Data/fusion_400hz_temp.csv";
-
-    if (rename(liveLog, dest) == 0) {
-        USER_LOG_INFO("CSV log saved as %s", dest);
-        DjiTest_WidgetLogAppend("CSV log saved as %s", dest);
-    } else {
-        USER_LOG_ERROR("Rename failed: %s", strerror(errno));
-        DjiTest_WidgetLogAppend("Rename failed: %s", strerror(errno));
+    if (atomic_load_explicit(&logging_active, memory_order_relaxed)) {
+        DjiTest_WidgetLogAppend("Stop logging before saving CSV");
+        return 0;
     }
 
-    /* writer_task() will notice g_csvFile == NULL, open a new temp,
-       write CSV_HEADER, and continue logging automatically.          */
+    DjiTest_WidgetLogAppend("CSV save requested");
+    logger_request_save_csv(dest);
     return 0;
 }
 
@@ -575,9 +561,6 @@ T_DjiReturnCode DjiTest_FcSubscriptionRunSample(void)
         USER_LOG_INFO("Fc subscription sample end");    
     }
     
-    if (g_csvFile)
-        fclose(g_csvFile);
-
 	if(!simulate_fc) {
 	    system("sleep 5; sudo shutdown -h now");
 	}

@@ -25,6 +25,7 @@ void tri_reader_start(pthread_t *th);
 void fusion_start(pthread_t *th);
 void log_writer_start(pthread_t *th);
 void tri_request_output_rate(uint8_t);
+void logger_request_save_csv(const char *requested_path);
 
 /* ------------ structures shared by all threads ---------------- */
 typedef struct {            /* TriSonica packet already in SI units */
