@@ -19,6 +19,7 @@ static _Atomic uint64_t widx = 0;
 static _Atomic uint64_t ridx = 0;
 static _Atomic uint64_t queue_dropped_rows = 0;
 static _Atomic bool save_requested = false;
+static _Atomic bool csv_session_unsaved = false;
 static pthread_mutex_t save_request_mutex = PTHREAD_MUTEX_INITIALIZER;
 static char save_requested_path[SAVE_PATH_MAX] = {0};
 static const char *CSV_HEADER;
@@ -90,6 +91,11 @@ void logger_request_save_csv(const char *requested_path)
     pthread_mutex_unlock(&save_request_mutex);
 
     USER_LOG_INFO("CSV save requested: %s", save_requested_path);
+}
+
+bool logger_has_unsaved_session(void)
+{
+    return atomic_load_explicit(&csv_session_unsaved, memory_order_acquire);
 }
 
 static bool logger_take_save_request(char *out, size_t out_size)
@@ -197,11 +203,13 @@ static void logger_handle_save_request(bool *closed_session_pending,
         }
         USER_LOG_WARN("CSV session had no rows; not saved");
         *closed_session_pending = false;
+        atomic_store_explicit(&csv_session_unsaved, false, memory_order_release);
         return;
     }
 
     if (logger_publish_session_file(requested_path)) {
         *closed_session_pending = false;
+        atomic_store_explicit(&csv_session_unsaved, false, memory_order_release);
     }
 }
 
@@ -308,6 +316,7 @@ static void *writer_task(void *arg)
                 if (closed_session_pending && rows_written_this_session == 0) {
                     (void)unlink(TEMP_CSV_PATH);
                     closed_session_pending = false;
+                    atomic_store_explicit(&csv_session_unsaved, false, memory_order_release);
                 }
                 logger_queue_discard_all();
                 rows_written_this_session = 0;
@@ -331,6 +340,9 @@ static void *writer_task(void *arg)
                 logger_close_session_file();
                 session_open = false;
                 closed_session_pending = true;
+                atomic_store_explicit(&csv_session_unsaved,
+                                      rows_written_this_session > 0,
+                                      memory_order_release);
                 USER_LOG_INFO("CSV logging session closed with %" PRIu64 " rows", rows_written_this_session);
             }
         }

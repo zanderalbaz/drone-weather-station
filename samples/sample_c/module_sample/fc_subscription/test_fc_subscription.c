@@ -196,6 +196,10 @@ T_DjiReturnCode OnWidgetSetValue(E_DjiWidgetType type, uint32_t index, int32_t v
     switch (index) {
         case 1:  // Button 1: Start logging
             if (value == 1) {
+                if (logger_has_unsaved_session()) {
+                    DjiTest_WidgetLogAppend("Save current CSV before starting a new session.");
+                    break;
+                }
                 waiting_for_csv_name = true;
                 startLogging();
                 DjiTest_WidgetLogAppend("Logging Data");
