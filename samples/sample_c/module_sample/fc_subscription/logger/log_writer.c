@@ -5,27 +5,61 @@
 #include <inttypes.h>
 #include <stdatomic.h>
 #include <pthread.h>
+#include <dji_logger.h>
 #include "logger.h"
 
 #define QSIZE  4096
 static LogRow        ring[QSIZE];
-static _Atomic uint32_t widx = 0, ridx = 0;
+static _Atomic uint64_t widx = 0;
+static _Atomic uint64_t ridx = 0;
+static _Atomic uint64_t queue_dropped_rows = 0;
 
-/* -------- tiny ring-buffer helpers ------------------------------------- */
-void logger_queue_push(const LogRow *r)
+/* -------- tiny single-producer / single-consumer ring-buffer helpers ---- */
+void logger_queue_push(const LogRow *row)
 {
-    uint32_t i = atomic_fetch_add(&widx, 1) % QSIZE;
-    ring[i] = *r;               /* overwrite when writer lags – fine for log */
+    if (!atomic_load_explicit(&logging_active, memory_order_relaxed))
+        return;
+
+    uint64_t w = atomic_load_explicit(&widx, memory_order_relaxed);
+    uint64_t r = atomic_load_explicit(&ridx, memory_order_acquire);
+
+    if ((w - r) >= QSIZE) {
+        atomic_fetch_add_explicit(&queue_dropped_rows, 1, memory_order_relaxed);
+        return;
+    }
+
+    ring[w % QSIZE] = *row;
+    atomic_store_explicit(&widx, w + 1, memory_order_release);
 }
 
 int logger_queue_pop(LogRow *out)
 {
-    uint32_t r = ridx;
-    if (r == atomic_load(&widx))
+    uint64_t r = atomic_load_explicit(&ridx, memory_order_relaxed);
+    uint64_t w = atomic_load_explicit(&widx, memory_order_acquire);
+
+    if (r == w)
         return 0;               /* empty */
+
     *out = ring[r % QSIZE];
-    ridx = r + 1;
+    atomic_store_explicit(&ridx, r + 1, memory_order_release);
     return 1;
+}
+
+static void logger_queue_discard_all(void)
+{
+    uint64_t w = atomic_load_explicit(&widx, memory_order_acquire);
+    atomic_store_explicit(&ridx, w, memory_order_release);
+}
+
+static void logger_queue_report_drops(void)
+{
+    static uint64_t last_reported_drops = 0;
+    uint64_t dropped = atomic_load_explicit(&queue_dropped_rows, memory_order_relaxed);
+
+    if (dropped >= last_reported_drops + QSIZE) {
+        USER_LOG_WARN("CSV logger queue dropped %" PRIu64 " rows total", dropped);
+        last_reported_drops = dropped;
+    }
 }
 
 /* ---------------- CSV header (one single line) ------------------------- */
@@ -73,6 +107,10 @@ static void *writer_task(void *arg)
 			setvbuf(g_csvFile, NULL, _IOFBF, 8192);
 			fputs(CSV_HEADER, g_csvFile);		
 		}
+
+        if (!atomic_load_explicit(&logging_active, memory_order_relaxed)) {
+            logger_queue_discard_all();
+        }
 
         while ((atomic_load_explicit(&logging_active, memory_order_relaxed)) && (logger_queue_pop(&row))) {
 
@@ -128,6 +166,7 @@ row.tri.MD, row.tri.TD);
             
 			
         }
+        logger_queue_report_drops();
 		if(logging_active){
 					fflush(g_csvFile);
 		}
