@@ -39,7 +39,14 @@ typedef struct {            /* one fused row at 400 Hz              */
     uint32_t schema_version;
     uint64_t row_index;
     uint64_t mono_us;       /* 0-based monotonic clock (µs)         */
-    uint32_t gps_s;         /* UTC seconds from FC (5 Hz)           */
+    uint64_t session_start_unix_s;
+    uint32_t session_start_unix_ns;
+    uint64_t session_start_mono_us;
+    uint32_t gps_s;         /* Raw FC GPS_TIME, format hhmmss       */
+    uint32_t gps_date_raw;  /* Raw FC GPS_DATE, format yyyymmdd     */
+    uint32_t gps_time_raw;  /* Raw FC GPS_TIME, format hhmmss       */
+    uint32_t gps_time_fc_ms;
+    uint32_t gps_time_fc_us;
     /* Fast FC topics ------------------------------------------- */
     float q[4];             /* QUATERNION (400→200 Hz, repeat OK)   */
     float ang_raw[3];       /* ANGULAR_RATE_RAW (400 Hz)            */

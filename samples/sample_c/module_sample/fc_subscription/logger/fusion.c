@@ -4,6 +4,7 @@
 #include <math.h>            /* NAN, cosf(), sinf() */
 #include <dji_fc_subscription.h>
 #include <dji_platform.h>
+#include <dji_logger.h>
 #include "logger.h"          /* brings in LogRow, logger_queue_push(), TriData, etc. */
 
 /* ─── Externals from tri_reader.c / test_fc_subscription.c ───────────────── */
@@ -36,12 +37,36 @@ static T_DjiFcSubscriptionRTKConnectStatus   _rtkConnectBuf = {0};
 static T_DjiFcSubscriptionFlightAnomaly      _flightAnomalyBuf = {0};
 /* GPS position & velocity */
 static T_DjiFcSubscriptionGpsVelocity        _gpsVelBuf = {0};
-/* GPS time (uint32 seconds from FC) */
+/* GPS date/time are raw FC values: date yyyymmdd, time hhmmss. */
+static T_DjiFcSubscriptionGpsDate            _gpsDateBuf = 0;
 static T_DjiFcSubscriptionGpsTime            _gpsTimeBuf = 0;
+static T_DjiDataTimestamp                    _gpsTimeTs = {0};
 /* RTK position & velocity & yaw */
 static T_DjiFcSubscriptionRtkPosition        _rtkPosBuf = {0};
 static T_DjiFcSubscriptionRtkVelocity        _rtkVelBuf = {0};
 static T_DjiFcSubscriptionRtkYaw             _rtkYawBuf = 0.0f;
+
+static void warn_topic_read_failed(const char *topic_name, T_DjiReturnCode code)
+{
+    static uint32_t gps_time_failures = 0;
+    static uint32_t gps_date_failures = 0;
+    uint32_t *failure_count = NULL;
+
+    if (strcmp(topic_name, "GPS_TIME") == 0) {
+        failure_count = &gps_time_failures;
+    } else if (strcmp(topic_name, "GPS_DATE") == 0) {
+        failure_count = &gps_date_failures;
+    }
+
+    if (failure_count == NULL)
+        return;
+
+    (*failure_count)++;
+    if ((*failure_count % 4000U) == 1U) {
+        USER_LOG_WARN("%s latest-value read failed: 0x%llx",
+                      topic_name, (unsigned long long)code);
+    }
+}
 
 /* ─── fusion thread itself ────────────────────────────────────────────────────── */
 static void *fusion_task(void *arg)
@@ -161,10 +186,30 @@ static void *fusion_task(void *arg)
                 DJI_FC_SUBSCRIPTION_TOPIC_GPS_VELOCITY,
                 (uint8_t *)&_gpsVelBuf, sizeof(_gpsVelBuf), NULL);
 
-            /* GPS_TIME (5 Hz) */
-            (void)DjiFcSubscription_GetLatestValueOfTopic(
+            /* GPS_DATE / GPS_TIME (raw FC values at 5 Hz) */
+            T_DjiReturnCode djiStat;
+            T_DjiFcSubscriptionGpsDate gpsDate = 0;
+            T_DjiFcSubscriptionGpsTime gpsTime = 0;
+            T_DjiDataTimestamp gpsTimeTs = {0};
+
+            djiStat = DjiFcSubscription_GetLatestValueOfTopic(
+                DJI_FC_SUBSCRIPTION_TOPIC_GPS_DATE,
+                (uint8_t *)&gpsDate, sizeof(gpsDate), NULL);
+            if (djiStat == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+                _gpsDateBuf = gpsDate;
+            } else {
+                warn_topic_read_failed("GPS_DATE", djiStat);
+            }
+
+            djiStat = DjiFcSubscription_GetLatestValueOfTopic(
                 DJI_FC_SUBSCRIPTION_TOPIC_GPS_TIME,
-                (uint8_t *)&_gpsTimeBuf, sizeof(_gpsTimeBuf), NULL);
+                (uint8_t *)&gpsTime, sizeof(gpsTime), &gpsTimeTs);
+            if (djiStat == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+                _gpsTimeBuf = gpsTime;
+                _gpsTimeTs = gpsTimeTs;
+            } else {
+                warn_topic_read_failed("GPS_TIME", djiStat);
+            }
 
             /* RTK_POSITION (5 Hz) */
             (void)DjiFcSubscription_GetLatestValueOfTopic(
@@ -196,7 +241,7 @@ static void *fusion_task(void *arg)
         LogRow row;
         memset(&row, 0, sizeof(row));
         row_set_float_fields_nan(&row);
-        row.schema_version = 2;
+        row.schema_version = 3;
         row.row_index = row_index++;
         row.mono_us = (uint64_t)ms * 1000ULL;  /* 64-bit µs monotonic clock */
 
@@ -286,6 +331,10 @@ static void *fusion_task(void *arg)
 
         /* 20) GPS_TIME */
         row.gps_s = (uint32_t)_gpsTimeBuf;
+        row.gps_date_raw = (uint32_t)_gpsDateBuf;
+        row.gps_time_raw = (uint32_t)_gpsTimeBuf;
+        row.gps_time_fc_ms = _gpsTimeTs.millisecond;
+        row.gps_time_fc_us = _gpsTimeTs.microsecond;
 
         /* 21) RTK_POSITION (PositionData) */
         row.rtk_pos[0] = _rtkPosBuf.latitude;

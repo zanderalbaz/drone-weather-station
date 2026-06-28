@@ -7,7 +7,9 @@
 #include <pthread.h>
 #include <errno.h>
 #include <sys/stat.h>
+#include <time.h>
 #include <dji_logger.h>
+#include <dji_platform.h>
 #include "logger.h"
 
 #define QSIZE  4096
@@ -23,6 +25,12 @@ static _Atomic bool csv_session_unsaved = false;
 static pthread_mutex_t save_request_mutex = PTHREAD_MUTEX_INITIALIZER;
 static char save_requested_path[SAVE_PATH_MAX] = {0};
 static const char *CSV_HEADER;
+
+typedef struct {
+    uint64_t unix_s;
+    uint32_t unix_ns;
+    uint64_t mono_us;
+} CsvSessionAnchor;
 
 /* -------- tiny single-producer / single-consumer ring-buffer helpers ---- */
 void logger_queue_push(const LogRow *row)
@@ -96,6 +104,36 @@ void logger_request_save_csv(const char *requested_path)
 bool logger_has_unsaved_session(void)
 {
     return atomic_load_explicit(&csv_session_unsaved, memory_order_acquire);
+}
+
+static void logger_capture_session_anchor(CsvSessionAnchor *anchor)
+{
+    struct timespec ts = {0};
+    uint32_t ms = 0;
+    T_DjiOsalHandler *os = DjiPlatform_GetOsalHandler();
+
+    memset(anchor, 0, sizeof(*anchor));
+
+    if (clock_gettime(CLOCK_REALTIME, &ts) == 0) {
+        anchor->unix_s = (uint64_t)ts.tv_sec;
+        anchor->unix_ns = (uint32_t)ts.tv_nsec;
+    } else {
+        USER_LOG_WARN("clock_gettime(CLOCK_REALTIME) failed: %s", strerror(errno));
+    }
+
+    if (os && os->GetTimeMs &&
+        os->GetTimeMs(&ms) == DJI_ERROR_SYSTEM_MODULE_CODE_SUCCESS) {
+        anchor->mono_us = (uint64_t)ms * 1000ULL;
+    } else {
+        USER_LOG_WARN("GetTimeMs failed while capturing CSV session anchor");
+    }
+}
+
+static void logger_apply_session_anchor(LogRow *row, const CsvSessionAnchor *anchor)
+{
+    row->session_start_unix_s = anchor->unix_s;
+    row->session_start_unix_ns = anchor->unix_ns;
+    row->session_start_mono_us = anchor->mono_us;
 }
 
 static bool logger_take_save_request(char *out, size_t out_size)
@@ -215,7 +253,9 @@ static void logger_handle_save_request(bool *closed_session_pending,
 
 /* ---------------- CSV header (one single line) ------------------------- */
 static const char *CSV_HEADER =
-"# schema_version,row_index,mono_us,gps_s,"
+"# schema_version,row_index,mono_us,"
+"session_start_unix_s,session_start_unix_ns,session_start_mono_us,"
+"gps_s,gps_date_raw,gps_time_raw,gps_time_fc_ms,gps_time_fc_us,"
 "q0,q1,q2,q3,"
 "ang_x,ang_y,ang_z,"
 "acc_x,acc_y,acc_z,"
@@ -240,7 +280,9 @@ static const char *CSV_HEADER =
 static void logger_write_csv_row(const LogRow *row)
 {
     fprintf(g_csvFile,
-"%u,%" PRIu64 ",%" PRIu64 ",%u,"
+"%u,%" PRIu64 ",%" PRIu64 ","
+"%" PRIu64 ",%u,%" PRIu64 ","
+"%u,%u,%u,%u,%u,"
 "%.7g,%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,"
@@ -262,7 +304,9 @@ static void logger_write_csv_row(const LogRow *row)
 "%.7g,%.7g,%.7g,%.7g,%.7g,"
 "%.7g,%.7g,%.7g,%.7g,%.7g\n",
 
-row->schema_version, row->row_index, row->mono_us, row->gps_s,
+row->schema_version, row->row_index, row->mono_us,
+row->session_start_unix_s, row->session_start_unix_ns, row->session_start_mono_us,
+row->gps_s, row->gps_date_raw, row->gps_time_raw, row->gps_time_fc_ms, row->gps_time_fc_us,
 row->q[0], row->q[1], row->q[2], row->q[3],
 row->ang_raw[0], row->ang_raw[1], row->ang_raw[2],
 row->accel_raw[0], row->accel_raw[1], row->accel_raw[2],
@@ -296,6 +340,7 @@ static void *writer_task(void *arg)
     bool session_open = false;
     bool closed_session_pending = false;
     uint64_t rows_written_this_session = 0;
+    CsvSessionAnchor session_anchor = {0};
     LogRow row;
 
     for (;;) {
@@ -320,6 +365,7 @@ static void *writer_task(void *arg)
                 }
                 logger_queue_discard_all();
                 rows_written_this_session = 0;
+                logger_capture_session_anchor(&session_anchor);
                 session_open = logger_open_session_file();
                 if (!session_open) {
                     atomic_store_explicit(&logging_active, false, memory_order_relaxed);
@@ -333,6 +379,7 @@ static void *writer_task(void *arg)
 
         if (!is_logging && was_logging) {
             while (session_open && logger_queue_pop(&row)) {
+                logger_apply_session_anchor(&row, &session_anchor);
                 logger_write_csv_row(&row);
                 rows_written_this_session++;
             }
@@ -353,6 +400,7 @@ static void *writer_task(void *arg)
         }
 
         while (is_logging && session_open && logger_queue_pop(&row)) {
+            logger_apply_session_anchor(&row, &session_anchor);
             logger_write_csv_row(&row);
             rows_written_this_session++;
         }
